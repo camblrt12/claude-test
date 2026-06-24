@@ -85,9 +85,22 @@ Rien en attente — tout est sous contrôle 💪
 
 ---
 
-### Step 5 — Send the message
+### Step 5 — Send the Slack DM
 
 Send the composed message as a Slack DM to Camille using `slack_send_message`.
+
+---
+
+### Step 6 — Send a push notification
+
+After the Slack DM is sent, send a push notification using the `PushNotification` tool:
+
+```
+☀️ Ton morning briefing est dans Slack — [X réunions, Y tâches en attente]
+```
+
+Keep it under 200 characters. Adapt the numbers to what was found in Steps 1 and 2.
+If the Slack send failed, say so in the notification instead.
 
 ---
 
@@ -104,4 +117,4 @@ Send the composed message as a Slack DM to Camille using `slack_send_message`.
 
 ## Expected Output
 
-A Slack DM sent to Camille by 8am with the full briefing. No files written, no ledger updated.
+A Slack DM sent to Camille + a push notification. No files written, no ledger updated.
